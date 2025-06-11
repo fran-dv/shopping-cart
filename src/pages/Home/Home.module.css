@@ -1,0 +1,20 @@
+.hero {
+  background-color: var(--surface);
+  padding: 10rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.hero h1,
+.hero h3,
+.hero p {
+  color: var(--on-surface);
+}
+
+.cta {
+  margin-top: 1.5rem;
+}
