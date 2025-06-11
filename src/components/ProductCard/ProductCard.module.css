@@ -1,0 +1,54 @@
+.container {
+  --image-size: 7rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface);
+  gap: 0.5rem;
+  padding: 1.5rem;
+  max-height: calc(var(--image-size) + 20rem);
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow:
+    0 4px 24px 0 rgba(0, 0, 0, 0.08),
+    0 1.5px 6px 0 rgba(0, 0, 0, 0.04);
+}
+
+.container h2,
+.container h3,
+.container p {
+  color: var(--on-surface);
+}
+
+.image {
+  padding-top: var(--image-size);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  max-height: calc(var(--image-size) - 2rem);
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.bottomSection {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  flex-grow: 1;
+}
+
+.addToCart {
+  flex-grow: 2;
+}
+
+.addToCartBtn {
+  width: 100%;
+  flex-grow: 1;
+}
