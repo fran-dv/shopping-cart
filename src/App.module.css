@@ -1,0 +1,11 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
