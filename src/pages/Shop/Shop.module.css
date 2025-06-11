@@ -1,0 +1,26 @@
+.shopContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.loading {
+  align-self: center;
+  padding: 2rem;
+}
+
+.header {
+  padding: 1.5rem;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.productsContainer {
+  width: 100%;
+  max-width: 1300px;
+  align-self: center;
+  padding: 1rem;
+  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
