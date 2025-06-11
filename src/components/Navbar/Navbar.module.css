@@ -22,7 +22,7 @@
 }
 
 .logo h2 {
-  font-size: 2.3rem;
+  font-size: calc(var(--links-font-size) + 1rem);
 }
 
 .linksContainer {
@@ -46,4 +46,10 @@
 .link:hover {
   cursor: pointer;
   background-color: var(--primary-hover);
+}
+
+@media (width <= 400px) {
+  .container {
+    --links-font-size: 1rem;
+  }
 }
