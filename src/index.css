@@ -9,11 +9,16 @@
   --primary-hover: #303f9f;
   --on-primary: #ffffff;
   --secondary: #ffc107;
+  --on-secondary: #212121;
   --background: #fafafa;
   --on-background: #212121;
   --surface: #ffffff;
   --on-surface: #212121;
   --error: #e53935;
+}
+
+body {
+  background-color: var(--background);
 }
 
 h1,
