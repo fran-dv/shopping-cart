@@ -1,0 +1,101 @@
+.container {
+  --padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding);
+  max-width: 1300px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container h2,
+.container h3 {
+  color: var(--on-background);
+}
+.container h4,
+.container p {
+  color: var(--on-surface);
+}
+
+.emptyView {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 5rem;
+  gap: 3rem;
+}
+
+.title {
+  padding-bottom: var(--padding);
+  align-self: center;
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 2;
+}
+
+.orderInfo {
+  background-color: var(--surface);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  border-radius: 1rem;
+  box-shadow: var(--item-shadow);
+  margin-bottom: auto;
+  margin-left: auto;
+}
+
+.orderInfo .section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.orderInfo .section p {
+  margin-left: auto;
+}
+
+.orderInfo .section.total {
+  margin-top: 1.5rem;
+  border-top: 2px solid var(--on-surface);
+  padding: 0.5rem 0;
+}
+
+.orderInfo .section.checkout .button {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.orderInfo .section.checkout .button p {
+  margin-left: 0;
+}
+
+@media (width <= 850px) {
+  .itemsContainer {
+    padding: 0;
+  }
+}
+
+@media (width <= 550px) {
+  .emptyView {
+    padding: 2rem 1rem;
+  }
+  .container {
+    --padding: 1rem;
+  }
+}
