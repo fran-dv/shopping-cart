@@ -6,7 +6,8 @@ interface Props {
   description: string;
   imageSrc: string;
   price: number;
-  onClickAddToCart: () => void;
+  onClickAddToCart: (productId: number) => void;
+  id: number;
 }
 
 export const ProductCard = ({
@@ -15,10 +16,15 @@ export const ProductCard = ({
   imageSrc,
   price,
   onClickAddToCart,
+  id,
 }: Props) => {
   const shortTitle = title.length > 30 ? title.slice(0, 30) + "..." : title;
   const shortDescription =
     description.length > 80 ? description.slice(0, 80) + "..." : description;
+
+  const handleClick = () => {
+    onClickAddToCart(id);
+  };
 
   return (
     <div className={styles.container}>
@@ -38,7 +44,7 @@ export const ProductCard = ({
         </div>
         <div className={styles.addToCart}>
           <Button
-            onClick={onClickAddToCart}
+            onClick={handleClick}
             content="Add to cart"
             className={styles.addToCartBtn}
           />
