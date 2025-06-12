@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+}
+
+.badge {
+  aspect-ratio: 1;
+  --width: 1.2rem;
+  width: var(--width);
+  height: var(--width);
+  position: absolute;
+  top: -30%;
+  right: -45%;
+  padding: 0.25rem;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge p {
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--on-secondary);
+  text-align: center;
+}
