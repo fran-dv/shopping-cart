@@ -8,9 +8,7 @@
   max-height: calc(var(--image-size) + 20rem);
   overflow: hidden;
   border-radius: 1rem;
-  box-shadow:
-    0 4px 24px 0 rgba(0, 0, 0, 0.08),
-    0 1.5px 6px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: var(--item-shadow);
 }
 
 .container h2,
