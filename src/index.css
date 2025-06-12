@@ -15,6 +15,10 @@
   --surface: #ffffff;
   --on-surface: #212121;
   --error: #e53935;
+  --neutral: #e5e5e5;
+
+  --item-shadow:
+    0 4px 24px 0 rgba(0, 0, 0, 0.08), 0 1.5px 6px 0 rgba(0, 0, 0, 0.04);
 }
 
 body {
