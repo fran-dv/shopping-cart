@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import styles from "./Snackbar.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Props {
   content: string;
@@ -18,14 +18,25 @@ export const Snackbar = ({
   onClose,
 }: Props) => {
   const [open, setOpen] = useState(true);
+  const timeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
+    const clearTime = () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+
+    clearTime();
+
     const delayInMilliseconds = seconds * 1000;
-    setTimeout(() => {
+    timeoutRef.current = window.setTimeout(() => {
       setOpen(false);
       onClose();
     }, delayInMilliseconds);
-  }, [seconds, onClose]);
+
+    return () => {
+      clearTime();
+    };
+  }, [seconds, onClose, content]);
 
   const close = () => {
     setOpen(false);
